@@ -27,6 +27,7 @@
 var os     = require("os");
 var fs     = require("fs");
 var path   = require("path");
+var url    = require("url");
 var http   = require("http");
 var events = require("events");
 
@@ -99,8 +100,11 @@ module.exports = {
                 followRedirect: false,
                 encoding:       null
             };
-            if (proxy !== "" && remoteRequest.url.href.indexOf("localhost") === -1)
-                remoteRequest.proxy = proxy;
+            if (proxy !== "") {
+                var hostname = url.parse(remoteRequest.url).hostname;
+                if (hostname !== "localhost" && hostname !== "127.0.0.1")
+                    remoteRequest.proxy = proxy;
+            }
 
             /*  helper function for fixing the upper/lower cases of headers  */
             var fixHeaderCase = function (headers) {
