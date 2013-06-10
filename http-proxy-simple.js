@@ -22,12 +22,11 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-/* global require: true */
-/* global module: true */
-
 /*  load Node module requirements (built-in)  */
+/* global require: true */
 var os     = require("os");
 var fs     = require("fs");
+var path   = require("path");
 var http   = require("http");
 var events = require("events");
 
@@ -35,6 +34,7 @@ var events = require("events");
 var req    = require("request");
 
 /*  export the API  */
+/* global module: true */
 module.exports = {
     createProxyServer: function (opts) {
         /*  prepare settings  */
@@ -47,7 +47,8 @@ module.exports = {
         /*  determine service identifier  */
         var id = opts.id;
         if (typeof id === "undefined" || (id + "").match(/^[a-zA-Z0-9_-]+\/[0-9](?:\.[0-9])*$/) === null) {
-            var pjson = JSON.parse(fs.readFileSync("package.json", "utf8"));
+            /* global __dirname: true */
+            var pjson = JSON.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf8"));
             id = pjson.name + "/" + pjson.version;
         }
 
