@@ -1,0 +1,35 @@
+{
+    "name":        "node-http-proxy-simple",
+    "homepage":    "http://github.com/rse/node-http-proxy-simple",
+    "description": "Simple HTTP proxy, allowing protocol and payload interception",
+    "version":     "0.9.0",
+    "license":     "MIT",
+    "author": {
+        "name":    "Ralf S. Engelschall",
+        "email":   "rse@engelschall.com",
+        "url":     "http://engelschall.com"
+    },
+    "keywords": [
+        "http", "proxy", "interception", "filter"
+    ],
+    "repository": {
+        "type": "git",
+        "url":  "git://github.com/rse/node-http-proxy-simple.git"
+    },
+    "bugs": {
+        "url":  "http://github.com/rse/node-http-proxy-simple/issues"
+    },
+    "main": "./http-proxy-simple.js",
+    "devDependencies": {
+        "grunt":                "~0.4.1",
+        "grunt-cli":            "~0.1.8",
+        "grunt-contrib-jshint": "~0.4.3",
+        "grunt-contrib-clean":  "~0.4.1"
+    },
+    "dependencies" : {
+        "request": "*"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
+}
