@@ -19,7 +19,7 @@ Installation
 Use the Node Package Manager (NPM) to install this module
 locally (default) or globally (with option `-g`):
 
-    $ npm install [-g] node-http-proxy-simple
+    $ npm install [-g] http-proxy-simple
 
 Usage
 -----
@@ -50,7 +50,7 @@ Create a proxy server. The following options are supported:
 - `host`: IP address (or name) for listening for HTTP proxy requests. Defaults to `127.0.0.1`.
 - `port`: TCP port for listening for HTTP proxy requests. Defaults to `3128`.
 - `servername`: server host name for identification purposes in HTTP `Via` headers. Defaults to the result of `os.hostname()`.
-- `id`: optional software name/version pair for identification purposes in HTTP `Via`headers. Defaults to `node-http-proxy-simple/X.X.X`.
+- `id`: optional software name/version pair for identification purposes in HTTP `Via`headers. Defaults to `http-proxy-simple/X.X.X`.
 - `proxy`: optional upstream proxy to forward requests to. Defaults to `""` (no forward proxy).
 
 See Also
