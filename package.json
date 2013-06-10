@@ -2,7 +2,7 @@
     "name":        "http-proxy-simple",
     "homepage":    "http://github.com/rse/node-http-proxy-simple",
     "description": "Simple HTTP proxy, allowing protocol and payload interception",
-    "version":     "0.9.0",
+    "version":     "0.9.1",
     "license":     "MIT",
     "author": {
         "name":    "Ralf S. Engelschall",
@@ -10,7 +10,7 @@
         "url":     "http://engelschall.com"
     },
     "keywords": [
-        "http", "proxy", "interception", "filter"
+        "http", "proxy", "interception", "filter", "request", "response"
     ],
     "repository": {
         "type": "git",

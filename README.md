@@ -1,5 +1,5 @@
 
-node-http-proxy-simple
+Node http-proxy-simple
 ======================
 
 Abstract
