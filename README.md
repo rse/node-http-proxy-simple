@@ -2,6 +2,12 @@
 Node http-proxy-simple
 ======================
 
+<p/>
+<img src="https://nodei.co/npm/node-http-proxy-simple.png?downloads=true&stars=true" alt=""/>
+
+<p/>
+<img src="https://david-dm.org/rse/node-http-proxy-simple.png" alt=""/>
+
 Abstract
 --------
 
