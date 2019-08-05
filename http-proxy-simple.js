@@ -150,9 +150,17 @@ module.exports = {
                     response.end();
                 }
             };
-            emitOrRun("http-intercept-request", function () {
-                performRequest(remoteRequest);
-            }, cid, request, response, remoteRequest, performRequest);
+            var body = "";
+            request.on('data', function (chunk) {
+              body += chunk;
+            });
+
+            request.on('end', function () {
+              remoteRequest.body = request.body = body;
+              emitOrRun("http-intercept-request", function () {
+                  performRequest(remoteRequest);
+              }, cid, request, response, remoteRequest, performRequest);
+            });
         });
 
         /*  react upon HTTP server events  */
